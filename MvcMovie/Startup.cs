@@ -48,6 +48,7 @@ namespace MvcMovie {
 			// デフォルトで表示するページの設定
 			// controllerで表示するコントロール(クラス)の指定
 			// actionで実行するメソッドの指定
+			// {id?}の?はidが省略可能なことを表す
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(
