@@ -25,6 +25,7 @@ namespace MvcMovie {
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		// ルーティング形式を設定している
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
@@ -44,6 +45,9 @@ namespace MvcMovie {
 
 			app.UseAuthorization();
 
+			// デフォルトで表示するページの設定
+			// controllerで表示するコントロール(クラス)の指定
+			// actionで実行するメソッドの指定
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(
