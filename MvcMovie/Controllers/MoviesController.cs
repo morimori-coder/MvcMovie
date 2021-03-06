@@ -86,6 +86,7 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
+            // ここでオブジェクトに適用されている検証属性が評価される
             if (ModelState.IsValid)
             {
                 _context.Add(movie);
@@ -123,6 +124,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
+            // ここでオブジェクトに適用されている検証属性が評価される
             if (ModelState.IsValid)
             {
                 try
